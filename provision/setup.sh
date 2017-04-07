@@ -26,7 +26,7 @@ apt-get install apache2 -y > /dev/null 2>&1
 # PHP
 
 echo "Installing PHP"
-apt-get install -y php php-cli php-mysql php-redis php-mcrypt php-xsl php-soap php-curl php-json libapache2-mod-php php-intl php-xsl php-xdebug php-mbstring > /dev/null 2>&1
+apt-get install -y php php-cli php-mysql php-redis php-mcrypt php-xsl php-soap php-curl php-json libapache2-mod-php php-intl php-xsl php-xdebug php-mbstring php-zip > /dev/null 2>&1
 
 # Composer
 
