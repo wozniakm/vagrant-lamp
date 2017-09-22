@@ -70,15 +70,14 @@ echo "Setting up Apache"
 rm -rf /etc/apache2/sites-available/*.conf
 rm -rf /etc/apache2/sites-enabled/*.conf
 
-sudo cp /vagrant/provision/config/ports.conf /etc/apache2/ports.conf > /dev/null 2>&1
+cp /vagrant/provision/config/ports.conf /etc/apache2/ports.conf > /dev/null 2>&1
 
-sudo cp /vagrant/provision/config/localhost.conf /etc/apache2/sites-available/localhost.conf > /dev/null 2>&1
-sudo cp /vagrant/provision/config/phpmyadmin.conf /etc/apache2/sites-available/phpmyadmin.conf > /dev/null 2>&1
-sudo cp /vagrant/provision/config/phpredisadmin.conf /etc/apache2/sites-available/phpredisadmin.conf > /dev/null 2>&1
+cp /vagrant/provision/config/localhost.conf /etc/apache2/sites-available/localhost.conf > /dev/null 2>&1
+cp /vagrant/provision/config/phpmyadmin.conf /etc/apache2/sites-available/phpmyadmin.conf > /dev/null 2>&1
+cp /vagrant/provision/config/phpredisadmin.conf /etc/apache2/sites-available/phpredisadmin.conf > /dev/null 2>&1
 
-sudo a2ensite localhost.conf phpmyadmin.conf phpredisadmin.conf > /dev/null 2>&1
-
-sudo a2enmod rewrite > /dev/null 2>&1
+a2ensite localhost.conf phpmyadmin.conf phpredisadmin.conf > /dev/null 2>&1
+a2enmod rewrite > /dev/null 2>&1
 
 # Restart Apache
 
